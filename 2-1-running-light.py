@@ -11,7 +11,9 @@ for j in range(3):
     for i in range(8):
         gpio.output(leds[i], 1)
         time.sleep(0.2)
+        gpio.output(leds[i], 0)
 
 gpio.output(leds, 0)
 gpio.cleanup()
+
 
