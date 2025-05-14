@@ -14,7 +14,7 @@ fig, ax = plt.subplots()
 sample_rate = float(tmp[0])
 step = float(tmp[1])
 n = len(data_array)
-duration = n / sample_rate #частота дискретизации
+duration = n / sample_rate 
 T = duration / n #период одного измерения
 
 
@@ -26,7 +26,7 @@ time = np.array(time)
 
 
 #4. Настройки цвета и формы линии, размера и цвета маркеров, частоты отображений маркеров и легенды
-ax.plot(time, data_array, color='grey', marker='o', linestyle='solid', linewidth=2, markersize=3, markevery=5, markerfacecolor='black', markeredgecolor='black', label='V(t)')
+ax.plot(time, data_array, color='grey', marker='o', linestyle='solid', linewidth=2, markersize=3, markevery=5, markerfacecolor='green', markeredgecolor='magenta', label='V(t)')
 ax.legend()
 
 #5. Задание максимальных и минимальных значений для шкалы
@@ -38,7 +38,7 @@ ax.set_xlabel("Время, с")
 ax.set_ylabel("Напряжение, В")
 
 #7. Название графика, с настройками его месторасположения и переносом текста на следующую строку, если текст слишком длинный
-ax.set_title("Процесс заряда и разряда конденсатора в RC-цепочке", pad=20, wrap=True)
+ax.set_title("Процесс заряда и разряда конденсатора в RC-цепочке", pad=20, wrap=True, loc='center')
 
 #8. Наличие сетки (главной и дополнительной), настройка ее цвета и стиля
 ax.yaxis.set_minor_locator(ticker.MultipleLocator(0.125))
